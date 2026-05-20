@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+
+    <!-- Organizations -->
+    <PartyA partyId="COMPANY_GOOGLE" partyTypeId="ORGANIZATION"/>
+    <PartyA partyId="DEPT_ENGINEERING" partyTypeId="ORGANIZATION"/>
+
+    <!-- Employees -->
+    <PartyA partyId="EMP_ADARSH" partyTypeId="PERSON"/>
+    <PartyA partyId="EMP_TRIPLEH" partyTypeId="PERSON"/>
+
+
+    <OrganizationA
+        partyId="COMPANY_GOOGLE"
+        organizationName="Google LLC"/>
+
+    <OrganizationA
+        partyId="DEPT_ENGINEERING"
+        organizationName="Engineering Department"/>
+
+
+    <PersonA
+        partyId="EMP_ADARSH"
+        firstName="Adarsh"
+        lastName="Goyal"
+        birthDate="2000-05-18"/>
+
+    <PersonA
+        partyId="EMP_TRIPLEH"
+        firstName="Triple"
+        lastName="H"
+        birthDate="1980-04-01"/>
+
+
+    <!-- Company Roles -->
+    <PartyRoleA
+        partyId="COMPANY_GOOGLE"
+        roleTypeId="INTERNAL_ORG"/>
+
+    <PartyRoleA
+        partyId="DEPT_ENGINEERING"
+        roleTypeId="DEPARTMENT"/>
+
+    <!-- Employee Roles -->
+    <PartyRoleA
+        partyId="EMP_ADARSH"
+        roleTypeId="EMPLOYEE"/>
+
+    <PartyRoleA
+        partyId="EMP_ADARSH"
+        roleTypeId="DEVELOPER"/>
+
+    <PartyRoleA
+        partyId="EMP_TRIPLEH"
+        roleTypeId="EMPLOYEE"/>
+
+    <PartyRoleA
+        partyId="EMP_TRIPLEH"
+        roleTypeId="MANAGER"/>
+
+
+
+
+    <!-- Adarsh Email -->
+    <ContactMechA
+        contactMechId="CM_ADARSH_EMAIL"
+        contactMechTypeId="EMAIL_ADDRESS"
+        infoString="adarsh.goyal@google.com"/>
+
+    <!-- Company Address -->
+    <ContactMechA
+        contactMechId="CM_GOOGLE_ADDR"
+        contactMechTypeId="POSTAL_ADDRESS"/>
+
+    <PostalAddressA
+        contactMechId="CM_GOOGLE_ADDR"
+        address1="1600 Amphitheatre Parkway"
+        city="Mountain View"
+        stateProvinceGeoId="CA"
+        postalCode="94043"
+        countryGeoId="USA"/>
+
+    <!-- Triple H Phone -->
+    <ContactMechA
+        contactMechId="CM_TRIPLEH_PHONE"
+        contactMechTypeId="TELECOM_NUMBER"/>
+
+    <TelecomNumberA
+        contactMechId="CM_TRIPLEH_PHONE"
+        countryCode="1"
+        areaCode="650"
+        contactNumber="5551234"/>
+
+
+
+
+    <!-- Adarsh Email Mapping -->
+    <PartyContactMechA
+        partyId="EMP_ADARSH"
+        contactMechId="CM_ADARSH_EMAIL"
+        fromDate="2026-05-18 09:00:00.0"/>
+
+    <PartyContactMechPurposeA
+        partyId="EMP_ADARSH"
+        contactMechId="CM_ADARSH_EMAIL"
+        contactMechPurposeTypeId="WORK_EMAIL"
+        fromDate="2026-05-18 09:00:00.0"/>
+
+    <!-- Company Address Mapping -->
+    <PartyContactMechA
+        partyId="COMPANY_GOOGLE"
+        contactMechId="CM_GOOGLE_ADDR"
+        fromDate="2005-01-01 00:00:00.0"/>
+
+    <PartyContactMechPurposeA
+        partyId="COMPANY_GOOGLE"
+        contactMechId="CM_GOOGLE_ADDR"
+        contactMechPurposeTypeId="PRIMARY_LOCATION"
+        fromDate="2005-01-01 00:00:00.0"/>
+
+    <!-- Triple H Phone Mapping -->
+    <PartyContactMechA
+        partyId="EMP_TRIPLEH"
+        contactMechId="CM_TRIPLEH_PHONE"
+        fromDate="2020-01-10 09:00:00.0"/>
+
+    <PartyContactMechPurposeA
+        partyId="EMP_TRIPLEH"
+        contactMechId="CM_TRIPLEH_PHONE"
+        contactMechPurposeTypeId="OFFICE_PHONE"
+        fromDate="2020-01-10 09:00:00.0"/>
+
+</entity-engine-xml>

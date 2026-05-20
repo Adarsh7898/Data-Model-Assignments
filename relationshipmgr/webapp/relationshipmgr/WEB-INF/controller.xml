@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<site-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://ofbiz.apache.org/Site-Conf"
+           xsi:schemaLocation="http://ofbiz.apache.org/Site-Conf http://ofbiz.apache.org/dtds/site-conf.xsd">
+
+    <!-- Common OFBiz Controller -->
+    <include location="component://common/webcommon/WEB-INF/common-controller.xml"/>
+
+    <description>Relationship Manager Component Site Configuration File</description>
+
+    <!-- ========================================== -->
+    <!-- MAIN DASHBOARD -->
+    <!-- ========================================== -->
+
+    <request-map uri="main">
+        <security https="true" auth="true"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
+
+    <!-- ========================================== -->
+    <!-- CREATE PERSON -->
+    <!-- ========================================== -->
+
+    <request-map uri="createPersonA">
+
+        <security https="true" auth="true"/>
+
+        <event type="service" invoke="createPartyA"/>
+
+        <response name="success"
+                  type="request"
+                  value="createPersonASub"/>
+
+        <response name="error"
+                  type="view"
+                  value="main"/>
+
+    </request-map>
+
+    <request-map uri="createPersonASub">
+
+        <security https="true" auth="true"/>
+
+        <event type="service" invoke="createPersonA"/>
+
+        <response name="success"
+                  type="view"
+                  value="main"/>
+
+        <response name="error"
+                  type="view"
+                  value="main"/>
+
+    </request-map>
+
+    <!-- ========================================== -->
+    <!-- CREATE ORGANIZATION -->
+    <!-- ========================================== -->
+
+    <request-map uri="createOrganizationA">
+
+        <security https="true" auth="true"/>
+
+        <event type="service" invoke="createPartyA"/>
+
+        <response name="success"
+                  type="request"
+                  value="createOrganizationASub"/>
+
+        <response name="error"
+                  type="view"
+                  value="main"/>
+
+    </request-map>
+
+    <request-map uri="createOrganizationASub">
+
+        <security https="true" auth="true"/>
+
+        <event type="service" invoke="createOrganizationA"/>
+
+        <response name="success"
+                  type="view"
+                  value="main"/>
+
+        <response name="error"
+                  type="view"
+                  value="main"/>
+
+    </request-map>
+
+    <!-- ========================================== -->
+    <!-- ASSIGN ROLE -->
+    <!-- ========================================== -->
+
+    <request-map uri="createPartyRoleA">
+
+        <security https="true" auth="true"/>
+
+        <event type="service" invoke="createPartyRoleA"/>
+
+        <response name="success"
+                  type="view"
+                  value="main"/>
+
+        <response name="error"
+                  type="view"
+                  value="main"/>
+
+    </request-map>
+
+    <!-- ========================================== -->
+    <!-- VIEW MAPPINGS -->
+    <!-- ========================================== -->
+
+    <view-map name="main"
+              type="screen"
+              page="component://relationshipmgr/widget/RelationshipmgrScreens.xml#main"/>
+
+</site-conf>

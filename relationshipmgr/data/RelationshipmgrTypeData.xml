@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-engine-xml>
+
+
+    <PartyTypeA
+        partyTypeId="PERSON"
+        description="Employee"/>
+
+    <PartyTypeA
+        partyTypeId="ORGANIZATION"
+        description="Company Organization"/>
+
+
+
+    <RoleTypeA
+        roleTypeId="EMPLOYEE"
+        description="Company Employee"/>
+
+    <RoleTypeA
+        roleTypeId="MANAGER"
+        description="Department Manager"/>
+
+    <RoleTypeA
+        roleTypeId="DEVELOPER"
+        description="Software Developer"/>
+
+    <RoleTypeA
+        roleTypeId="DEPARTMENT"
+        description="Company Department"/>
+
+    <RoleTypeA
+        roleTypeId="INTERNAL_ORG"
+        description="Internal Company Organization"/>
+
+
+
+    <ContactMechTypeA
+        contactMechTypeId="POSTAL_ADDRESS"
+        description="Office Address"/>
+
+    <ContactMechTypeA
+        contactMechTypeId="TELECOM_NUMBER"
+        description="Office Contact Number"/>
+
+    <ContactMechTypeA
+        contactMechTypeId="EMAIL_ADDRESS"
+        description="Company Email Address"/>
+
+    <ContactMechTypeA
+        contactMechTypeId="WEB_ADDRESS"
+        description="Company Website Address"/>
+
+
+
+
+
+    <ContactMechPurposeTypeA
+        contactMechPurposeTypeId="PRIMARY_LOCATION"
+        description="Head Office Location"/>
+
+    <ContactMechPurposeTypeA
+        contactMechPurposeTypeId="BILLING_LOCATION"
+        description="Billing Office Location"/>
+
+    <ContactMechPurposeTypeA
+        contactMechPurposeTypeId="PRIMARY_PHONE"
+        description="Primary Office Phone Number"/>
+
+    <ContactMechPurposeTypeA
+        contactMechPurposeTypeId="WORK_EMAIL"
+        description="Official Work Email Address"/>
+
+    <ContactMechPurposeTypeA
+        contactMechPurposeTypeId="OFFICE_PHONE"
+        description="Office Telephone Number"/>
+
+</entity-engine-xml>
