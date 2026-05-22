@@ -1,9 +1,6 @@
 
 <entity-engine-xml>
 
-    <!-- ===================================================== -->
-    <!-- PRODUCT CATEGORY TYPES -->
-    <!-- ===================================================== -->
 
     <ProductCategoryType
         productCategoryTypeId="ROOT_CATEGORY"
@@ -16,9 +13,7 @@
         hasTable="N"
         parentTypeId="ROOT_CATEGORY"/>
 
-    <!-- ===================================================== -->
-    <!-- PRODUCT CATEGORIES -->
-    <!-- ===================================================== -->
+ 
 
     <!-- Root Category -->
     <ProductCategory
@@ -46,26 +41,18 @@
         description="Womens summer clothing"
         longDescription="Collection of womens summer wear."/>
 
-    <!-- ===================================================== -->
-    <!-- PRODUCT CATALOG CATEGORY TYPE -->
-    <!-- ===================================================== -->
-
     <ProdCatalogCategoryType
         prodCatalogCategoryTypeId="PCCT_BROWSE"
         description="Browse Category"/>
 
-    <!-- ===================================================== -->
-    <!-- PRODUCT CATALOG -->
-    <!-- ===================================================== -->
+
 
     <ProdCatalog
         prodCatalogId="SUMMER_CATALOG"
         catalogName="Summer Season Catalog"
         useQuickAdd="Y"/>
 
-    <!-- ===================================================== -->
-    <!-- CATALOG CATEGORY ASSOCIATIONS -->
-    <!-- ===================================================== -->
+ 
 
     <ProdCatalogCategory
         prodCatalogId="SUMMER_CATALOG"
@@ -81,9 +68,7 @@
         fromDate="2026-05-19 00:00:00.0"
         sequenceNum="2"/>
 
-    <!-- ===================================================== -->
-    <!-- PRODUCTS -->
-    <!-- ===================================================== -->
+
 
     <!-- Men's Products -->
 
@@ -141,9 +126,6 @@
         primaryProductCategoryId="WOMENS_WEAR"
         productTypeId="FINISHED_GOOD"/>
 
-    <!-- ===================================================== -->
-    <!-- PRODUCT CATEGORY MEMBERS -->
-    <!-- ===================================================== -->
 
     <!-- Men's Category Members -->
 
